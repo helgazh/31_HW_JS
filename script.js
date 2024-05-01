@@ -1,80 +1,48 @@
-//Min
-//Тобі потрібно зберігати ім’я та прізвище в змінній, придумай до 4-х імен змінних, що потрібні тобі для даної задачі.
-let name = 'Olha';
-let surname = 'Zhadan';
-let nameAndSurname = 'OlhaZhadan';
-let user = 'Olha Zhadan';
+//Мінімум
+//Виконай додавання 0,1 і 0,2 добийся математично правильної відповіді.
+let a = 0.1;
+let b = 0.2;
+let sum = a + b;
+alert(sum.toFixed(1));
 
-//Також напиши до 5 неправильних імен (неправильні імена повинні бути закоментовані);
-/*
-let if;
-let else; 
-let function; 
-let for; 
-let while;
-let class;
-let a bc;
-let #abc;
-let 2abc;
-var NaN;
-*/
+//Виконай додавання рядка "1" і цифри 2 (обидві операнди повинні бути в змінних), добийся математично правильної відповіді.
+let string = "1";
+let number = 2;
+let stringAndNumber = parseInt(string) + number;
+alert(stringAndNumber);
 
-//Вкажи всі можливі способи коментування коду;
-/*
-*/
-
-//Які стилі написання імен змінних ти знаєш?
-let test;
-let TEST;
-let $test;
-let _123test;
-let test_value123$;
-let testValue;
-
-//Norma
-//Запитай ім’я користувача та виведи у відповідь “Привіт, *ім’я*”;
-let result = prompt('What is your name?');
-alert("Hi" + " " + result);
-// // Refresh the page
-// location.reload();
-
-//Запитай рік народження користувача, порахуй його/її вік і виведи результат. Поточний рік вкажи в коді як константу;
-const YEAR = 2024;
-let age = prompt('How old are you?');
-let bornYear = YEAR - age;
-alert("So you was born in" + " " + bornYear + " " + "year");
-// // Refresh the page
-// location.reload();
-
-//Запитай у користувача довжину сторони квадрату і виведи периметр цього квадрата
-let lenthOfSquareSide = prompt('What is the length of the square side you want to calculate?');
-let square = lenthOfSquareSide * 4;
-alert("So square is" + " " + square);
-// // Refresh the page
-// location.reload();
-
-//Max
-//Запитай у користувача радіус кола і виведи площу такої окружності.
-let radius = prompt('What is the radius?');
-const PI = 3.14;
-let circle = 2 * PI * radius; 
-alert("So circle is" + " " + circle);
-// // Refresh the page
-// location.reload();
-
-//Запитай у користувача відстань в кілометрах між двома містами і за скільки годин він хоче дістатися. Порахуй швидкість, з якою необхідно рухатися, щоб встигнути вчасно.
-let distance = prompt('What is the distance for your trip?');
-let time = prompt('What amount of time you will be ready to spend for your trip?');
-let speed = distance / time;
-alert("So you need to use" + " " + speed + " " + "speed to  achieve your goal");
-// // Refresh the page
-// location.reload();
+//Користувач вказує обсяг флешки в Гб. Програма повинна порахувати скільки файлів розміром в 820 Мб поміщається на флешку.
+let Gb = prompt('Amount of GB?');
+const MB = 820;
+let files = Gb * 1024 / 820;
+alert(Math.floor(files));
 
 
-//Реалізуй конвертор валют. Користувач вводить долари, програма переводить їх в євро. Курс валют зберігається в константі.
-let euro = prompt('In euro?');
-const DOLLAR = 1.07;
-let calcDollar = euro * DOLLAR;
-alert("It will be" + " " + calcDollar + " " + "dollars");
-// // Refresh the page
-// location.reload();
+//Норма
+//Користувач вводить суму грошей в гаманці і ціну однієї шоколадки. Програма виводить скільки шоколадок може купити користувач і скільки здачі у нього залишиться.
+let moneyAmount = prompt('How many money do you have?');
+let chocolatePrice = prompt('Wht is the price of the chocolate?');
+let chocolateAmount = moneyAmount / chocolatePrice;
+alert(Math.round(chocolateAmount));
+
+//Запитай у користувача тризначне число і виведи його задом наперед. Для вирішення завдання тобі знадобиться оператор % (залишок від ділення).
+let userNumber = prompt("What is your number?");
+alert(userNumber.split("").reverse().join(""));
+
+
+//Максимум
+//Користувач вводить суму вкладу в банк на 2 місяці, з процентною ставкою депозиту 5% річних. Вивести суму нарахованих відсотків.
+let amountIntoBankAccount = prompt('What amount of money you ready to put in your Bank Account??');
+const DEPOSIT = 5;
+let yearResult = ((amountIntoBankAccount * DEPOSIT) / 100) * (365 * 2 / 365);
+alert('You will get' + ' '+ yearResult);
+
+//Що повернуть вирази:
+// 2 && 0 && 3
+//return: 0;
+
+// 2 || 0 || 3
+//return: 2;
+
+//2 && 0 || 3
+//return: 3;
