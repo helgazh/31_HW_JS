@@ -14,8 +14,10 @@ alert(stringAndNumber);
 //Користувач вказує обсяг флешки в Гб. Програма повинна порахувати скільки файлів розміром в 820 Мб поміщається на флешку.
 let Gb = prompt('Amount of GB?');
 const MB = 820;
-let files = Gb * 1024 / 820;
-alert(Math.floor(files));
+let filesGb = MB / 1024;
+const filesOnFlash = Gb / filesGb.toFixed(4);
+
+alert(Math.floor(filesOnFlash));
 
 
 //Норма
@@ -23,7 +25,7 @@ alert(Math.floor(files));
 let moneyAmount = prompt('How many money do you have?');
 let chocolatePrice = prompt('Wht is the price of the chocolate?');
 let chocolateAmount = moneyAmount / chocolatePrice;
-alert(Math.round(chocolateAmount));
+alert(Math.floor(chocolateAmount));
 
 //Запитай у користувача тризначне число і виведи його задом наперед. Для вирішення завдання тобі знадобиться оператор % (залишок від ділення).
 let userNumber = prompt("What is your number?");
@@ -32,10 +34,10 @@ alert(userNumber.split("").reverse().join(""));
 
 //Максимум
 //Користувач вводить суму вкладу в банк на 2 місяці, з процентною ставкою депозиту 5% річних. Вивести суму нарахованих відсотків.
-let amountIntoBankAccount = prompt('What amount of money you ready to put in your Bank Account??');
-const DEPOSIT = 5;
-let yearResult = ((amountIntoBankAccount * DEPOSIT) / 100) * (365 * 2 / 365);
-alert('You will get' + ' '+ yearResult);
+// let amountIntoBankAccount = prompt('What amount of money you ready to put in your Bank Account??');
+// const DEPOSIT = 0.05;
+// let yearResult = math.round(amountIntoBankAccount * (1 + DEPOSIT)) * (365 * 2 / 365);
+// alert('You will get' + ' '+ yearResult);
 
 //Що повернуть вирази:
 // 2 && 0 && 3
